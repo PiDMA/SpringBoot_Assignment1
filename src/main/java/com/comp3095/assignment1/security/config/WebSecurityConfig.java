@@ -1,6 +1,5 @@
 package com.comp3095.assignment1.security.config;
 
-<<<<<<< HEAD
 import com.comp3095.assignment1.service.UserServiceImpl;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -13,19 +12,12 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-=======
-import lombok.AllArgsConstructor;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
->>>>>>> 75b3fc6ad5a559c1fdfdb3cc8be9aa1239df6ea1
 
 @Configuration
 @AllArgsConstructor
 @EnableWebSecurity
 
 public class WebSecurityConfig  extends WebSecurityConfigurerAdapter {
-<<<<<<< HEAD
     private final UserServiceImpl userService;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
     @Override
@@ -54,6 +46,4 @@ public class WebSecurityConfig  extends WebSecurityConfigurerAdapter {
         provider.setUserDetailsService(userService);
         return provider;
     }
-=======
->>>>>>> 75b3fc6ad5a559c1fdfdb3cc8be9aa1239df6ea1
 }
