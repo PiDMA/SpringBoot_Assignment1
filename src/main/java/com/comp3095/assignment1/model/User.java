@@ -16,14 +16,23 @@ import java.util.Collections;
 @Entity
 @Data
 @Builder
+<<<<<<< HEAD
 @Table(name = "\"user\"")
+=======
+
+>>>>>>> 75b3fc6ad5a559c1fdfdb3cc8be9aa1239df6ea1
 public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+<<<<<<< HEAD
     private String firstName;
     private String lastName;
+=======
+    private String name;
+    private String userName;
+>>>>>>> 75b3fc6ad5a559c1fdfdb3cc8be9aa1239df6ea1
     private String email;
     private String password;
     @Enumerated(EnumType.STRING)
@@ -31,10 +40,16 @@ public class User implements UserDetails {
 
 
 
+<<<<<<< HEAD
 
     public User(String firstName, String lastName, String email, String password, AppUserRole appUserRole) {
         this.firstName = firstName;
         this.lastName = lastName;
+=======
+    public User(String name, String userName, String email, String password, AppUserRole appUserRole) {
+        this.name = name;
+        this.userName = userName;
+>>>>>>> 75b3fc6ad5a559c1fdfdb3cc8be9aa1239df6ea1
         this.email = email;
         this.password = password;
         this.appUserRole = appUserRole;
@@ -46,6 +61,7 @@ public class User implements UserDetails {
                 new SimpleGrantedAuthority(appUserRole.name());
         return Collections.singletonList(authority);
     }
+<<<<<<< HEAD
     public String getFirstName() {
         return firstName;
     }
@@ -53,6 +69,9 @@ public class User implements UserDetails {
     public String getLastName() {
         return lastName;
     }
+=======
+
+>>>>>>> 75b3fc6ad5a559c1fdfdb3cc8be9aa1239df6ea1
     @Override
     public String getPassword() {
         return password;
@@ -60,7 +79,11 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
+<<<<<<< HEAD
         return email;
+=======
+        return userName;
+>>>>>>> 75b3fc6ad5a559c1fdfdb3cc8be9aa1239df6ea1
     }
 
     @Override
@@ -70,17 +93,29 @@ public class User implements UserDetails {
 
     @Override
     public boolean isAccountNonLocked() {
+<<<<<<< HEAD
         return true;
+=======
+        return false;
+>>>>>>> 75b3fc6ad5a559c1fdfdb3cc8be9aa1239df6ea1
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
+<<<<<<< HEAD
         return true;
+=======
+        return false;
+>>>>>>> 75b3fc6ad5a559c1fdfdb3cc8be9aa1239df6ea1
     }
 
     @Override
     public boolean isEnabled() {
+<<<<<<< HEAD
         return true;
+=======
+        return false;
+>>>>>>> 75b3fc6ad5a559c1fdfdb3cc8be9aa1239df6ea1
     }
 
 
