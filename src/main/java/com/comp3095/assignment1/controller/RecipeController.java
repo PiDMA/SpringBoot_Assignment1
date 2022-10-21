@@ -3,11 +3,13 @@ package com.comp3095.assignment1.controller;
 import com.comp3095.assignment1.model.Recipe;
 import com.comp3095.assignment1.service.RecipeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@Controller
 public class RecipeController {
     @Autowired
     private RecipeService recipeService;
@@ -20,9 +22,14 @@ public class RecipeController {
 
     // Read operation
     @GetMapping("/recipe")
-    public List<Recipe> fetchDepartmentList()
-    {
-        return recipeService.fetchRecipeList();
+
+        public String fetchUserList(Model model) {
+
+        model.addAttribute("recipe", recipeService.fetchRecipeList());
+        return "test";
+
+
+
     }
 
     // Update operation
